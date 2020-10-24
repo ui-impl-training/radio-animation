@@ -23,11 +23,11 @@ const StyledComponent = styled(Component)`
   display: inline-block;
   padding: 24px 16px 24px 64px;
   width: 100%;
+  font-size: 16px;
   &::before {
     position: absolute;
     content: "";
     display: inline-block;
-    border-color: #05f;
     transition: all 0.2s ease-in;
     height: 22px;
     width: 22px;
@@ -35,23 +35,28 @@ const StyledComponent = styled(Component)`
     left: 24px;
     background-color: #f6f8fa;
     border: 2px solid #c8c9cc;
+    border-color: ${(props) => (props.isSelected ? "#05f" : "#c8c9cc")};
     border-radius: 50%;
+    box-shadow: ${(props) =>
+      props.isSelected ? "0 0 0 4px rgba(0,85,255,.32)" : undefined};
   }
 
   &::after {
     ${(props) =>
-      props.isSelected &&
-      `
+      props.isSelected
+        ? `
         content: "";
         height: 16px;
         width: 16px;
-        left: 29px;
-        top: 25px;
+        left: 27px;
+        top: 23px;
         background-color: #05f;
         border-radius: 50%;
         position: absolute;
+        content: "";
         display: inline-block;
-      `}
+    `
+        : undefined}
   }
 `;
 

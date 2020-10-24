@@ -18,25 +18,25 @@ const Component = (props: Props) => (
       isSelected={0 === props.selected}
       handleClick={() => props.select(0)}
     >
-      test
+      test1
     </RadioButton>
     <RadioButton
       isSelected={1 === props.selected}
       handleClick={() => props.select(1)}
     >
-      test
+      test2
     </RadioButton>
     <RadioButton
       isSelected={2 === props.selected}
       handleClick={() => props.select(2)}
     >
-      test
+      test3
     </RadioButton>
     <RadioButton
       isSelected={3 === props.selected}
       handleClick={() => props.select(3)}
     >
-      test
+      test4
     </RadioButton>
   </div>
 );
