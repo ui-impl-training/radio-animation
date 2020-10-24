@@ -1,0 +1,32 @@
+{
+  "name": "radio-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ui-impl-training/radio-animation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ui-impl-training/radio-animation/issues"
+  },
+  "homepage": "https://github.com/ui-impl-training/radio-animation#readme",
+  "dependencies": {
+    "goober": "^2.0.9",
+    "preact": "^10.5.5"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
