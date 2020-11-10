@@ -1,8 +1,9 @@
-import { h } from "preact";
+import { Fragment, h } from "preact";
 import { css, styled } from "goober";
-import { FC } from "preact/compat";
 
 interface PassedProps {
+  name: string;
+  value: string;
   isSelected: boolean;
   handleClick: () => void;
   children?: preact.ComponentChildren;
@@ -13,9 +14,21 @@ interface Props extends PassedProps {
 }
 
 const Component = (props: Props) => (
-  <label className={props.className} onClick={props.handleClick}>
-    {props.children}
-  </label>
+  <Fragment>
+    <label
+      className={props.className}
+      onClick={props.handleClick}
+      id={props.value}
+    >
+      <input
+        type="radio"
+        name={props.name}
+        value={props.value}
+        for={props.value}
+      ></input>
+      {props.value}
+    </label>
+  </Fragment>
 );
 
 const StyledComponent = styled(Component)`
@@ -24,6 +37,9 @@ const StyledComponent = styled(Component)`
   padding: 24px 16px 24px 64px;
   width: 100%;
   font-size: 16px;
+  & > input {
+    visibility: hidden;
+  }
   &::before {
     position: absolute;
     content: "";
