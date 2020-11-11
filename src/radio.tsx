@@ -38,7 +38,7 @@ const StyledComponent = styled(Component)`
   width: 100%;
   font-size: 16px;
   & > input {
-    visibility: hidden;
+    opacity: 0;
   }
   &::before {
     position: absolute;
